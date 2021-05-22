@@ -71,7 +71,7 @@ def provide_planet_info(update: Update, context: CallbackContext) -> None:
             else:
                 update.message.reply_text(ephem.constellation(getattr(ephem, planet)(date.today()))[1])
         else:
-            update.message.reply_text("Такой планеты не существует!")
+            update.message.reply_text("Я не знаю такой планеты!")
 
 
 def main() -> None:
